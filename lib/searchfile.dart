@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 class DropdownExample extends StatefulWidget {
   @override
   _DropdownExampleState createState() => _DropdownExampleState();
@@ -13,6 +13,7 @@ class _DropdownExampleState extends State<DropdownExample> {
   String? _selectedCountry;
   String? _selectedFood;
   List<String> _foodNames = [];
+  var hostIp = dotenv.env['BACKEND_HOST_ADRESSE'];
 
   @override
   void initState() {
@@ -21,7 +22,7 @@ class _DropdownExampleState extends State<DropdownExample> {
   }
 
   Future<void> _fetchCountriesAndFoods() async {
-    const url = 'http://192.168.1.187:8000/api/recipes';
+    var url = 'http://$hostIp/api/recipes';
     try {
       final response = await http.get(
         Uri.parse(url),

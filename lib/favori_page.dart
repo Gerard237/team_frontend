@@ -23,7 +23,7 @@ class _FavoriListPageState extends State<FavoriListPage> {
   bool _isLoading = false;
   bool _hasMore = true;
   var hostIp = dotenv.env['BACKEND_HOST_ADRESSE'];
-  var port = dotenv.env['BACKEND_HOST_PORT'];
+  //var port = dotenv.env['BACKEND_HOST_PORT'];
 
   final List<int> _userFavori = [];
 
@@ -47,7 +47,7 @@ class _FavoriListPageState extends State<FavoriListPage> {
     
 
     String tmp = widget.user;
-    String url = 'http://$hostIp:$port/api/favoris?user=$tmp';
+    String url = 'http://$hostIp/api/favoris?user=$tmp';
 
     try {
       final response = await http.get(
@@ -62,7 +62,7 @@ class _FavoriListPageState extends State<FavoriListPage> {
           _userFavori.add(recipe["id_recipe"]);
         }
 
-      String urlRecipe = 'http://$hostIp:$port/api/recipes/filter_by_location/?id_recipes=$_userFavori&page=$_page&page_size=$_pageSize';        
+      String urlRecipe = 'http://$hostIp/api/recipes/filter_by_location/?id_recipes=$_userFavori&page=$_page&page_size=$_pageSize';        
 
       final responseR = await http.get(
         Uri.parse(urlRecipe),
@@ -99,7 +99,7 @@ class _FavoriListPageState extends State<FavoriListPage> {
 
   Future<void> _toggleFavorite(int recipeId, int index) async {
     
-    var url = 'http://$hostIp:$port/api/favoris/'; //put correct url
+    var url = 'http://$hostIp/api/favoris/'; //put correct url
     try {
         
         final response = await http.delete(
