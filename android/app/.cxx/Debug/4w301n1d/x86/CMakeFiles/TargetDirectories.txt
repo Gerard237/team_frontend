@@ -1,0 +1,2 @@
+/home/simo/Bureau/team/Frontend/android/app/.cxx/Debug/4w301n1d/x86/CMakeFiles/edit_cache.dir
+/home/simo/Bureau/team/Frontend/android/app/.cxx/Debug/4w301n1d/x86/CMakeFiles/rebuild_cache.dir

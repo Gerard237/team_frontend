@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "513310573256",
+    "project_id": "worldflavour-a967e",
+    "storage_bucket": "worldflavour-a967e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513310573256:android:3505f98a89e99883d35bfd",
+        "android_client_info": {
+          "package_name": "com.example.worldfavor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbOT-jwWmdwGRIovqSuNrQVlciXqnbKqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

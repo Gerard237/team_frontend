@@ -1,0 +1,1 @@
+/home/simo/Bureau/team/Frontend/build/app/intermediates/cxx/Debug/4w301n1d/obj/arm64-v8a
